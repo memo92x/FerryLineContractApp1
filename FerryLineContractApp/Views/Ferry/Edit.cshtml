@@ -1,0 +1,78 @@
+﻿@model FerryLineContractApp.DTO.FerryDTO
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Ferry</legend>
+
+        @Html.HiddenFor(model => model.FerryId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FerryName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FerryName)
+            @Html.ValidationMessageFor(model => model.FerryName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FerrySize)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FerrySize)
+            @Html.ValidationMessageFor(model => model.FerrySize)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PassengerCapacity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PassengerCapacity)
+            @Html.ValidationMessageFor(model => model.PassengerCapacity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleCapacity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VehicleCapacity)
+            @Html.ValidationMessageFor(model => model.VehicleCapacity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Municipality)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Municipality)
+            @Html.ValidationMessageFor(model => model.Municipality)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DockId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DockId)
+            @Html.ValidationMessageFor(model => model.DockId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,36 @@
+﻿@model FerryLineContractApp.DTO.VehicleDTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Vehicle</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VehicleSize)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VehicleSize)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VehicleType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VehicleType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VehiclePrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VehiclePrice)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.VehicleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,29 @@
+﻿@model FerryLineContractApp.DTO.DockDTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Dock</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DockName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DockName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FerryCapacity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FerryCapacity)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.DockId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

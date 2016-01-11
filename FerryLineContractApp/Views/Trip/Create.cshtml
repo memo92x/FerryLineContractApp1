@@ -1,0 +1,60 @@
+﻿@model FerryLineContractApp.DTO.TripDTO
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Trip</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DepatureTime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DepatureTime)
+            @Html.ValidationMessageFor(model => model.DepatureTime)
+        </div>
+
+        @*<div class="editor-label">
+            @Html.LabelFor(model => model.RouteId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RouteId)
+            @Html.ValidationMessageFor(model => model.RouteId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FerryId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FerryId)
+            @Html.ValidationMessageFor(model => model.FerryId)
+        </div>*@
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TripPrice)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TripPrice)
+            @Html.ValidationMessageFor(model => model.TripPrice)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

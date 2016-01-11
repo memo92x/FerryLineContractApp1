@@ -1,0 +1,63 @@
+﻿@model FerryLineContractApp.DTO.FerryDTO
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>*@
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FerryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FerrySize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassengerCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Municipality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DockId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.FerryList) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FerryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FerrySize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassengerCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Municipality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DockId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FerryId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FerryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FerryId })
+        </td>
+    </tr>
+}
+
+</table>

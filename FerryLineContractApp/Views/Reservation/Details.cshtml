@@ -1,0 +1,50 @@
+﻿@model FerryLineContractApp.DTO.ReservationDTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Reservation</legend>
+
+    @*<div class="display-label">
+         @Html.DisplayNameFor(model => model.CustomerId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CustomerId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TripId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TripId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VehicleId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VehicleId)
+    </div>*@
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TotalPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TotalPrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NumberOfPeople)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumberOfPeople)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ReservationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

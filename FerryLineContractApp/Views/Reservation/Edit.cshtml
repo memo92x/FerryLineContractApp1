@@ -1,0 +1,70 @@
+﻿@model FerryLineContractApp.DTO.ReservationDTO
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Reservation</legend>
+
+       @* @Html.HiddenFor(model => model.ReservationId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CustomerId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CustomerId)
+            @Html.ValidationMessageFor(model => model.CustomerId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TripId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TripId)
+            @Html.ValidationMessageFor(model => model.TripId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VehicleId)
+            @Html.ValidationMessageFor(model => model.VehicleId)
+        </div>*@
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TotalPrice)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TotalPrice)
+            @Html.ValidationMessageFor(model => model.TotalPrice)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumberOfPeople)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumberOfPeople)
+            @Html.ValidationMessageFor(model => model.NumberOfPeople)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

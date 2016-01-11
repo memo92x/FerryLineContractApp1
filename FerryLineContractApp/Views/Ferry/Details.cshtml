@@ -1,0 +1,57 @@
+﻿@model FerryLineContractApp.DTO.FerryDTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Ferry</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FerryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FerryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FerrySize)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FerrySize)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PassengerCapacity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PassengerCapacity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VehicleCapacity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VehicleCapacity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Municipality)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Municipality)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DockId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DockId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.FerryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

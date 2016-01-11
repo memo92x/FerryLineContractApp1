@@ -1,0 +1,85 @@
+﻿@model FerryLineContractApp.DTO.CustomerDTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Customer</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Firstname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Firstname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Lastname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Lastname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Street)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Street)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HouseNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HouseNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PostalCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PostalCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Native)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Native)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AmountOfFreeRides)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AmountOfFreeRides)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new  { id=Model.CustomerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
